@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <section
       id="projects"
-      className="max-h-screen w-full py-12 md:py-24 lg:py-32"
+      className="min-h-screen max-md:mt-[25vh] w-full py-12 md:py-24 lg:py-32"
     >
-      <div className="container space-y-12 px-4 md:px-6 ">
+      <div className="container min-h-screen space-y-12 px-4 md:px-6 ">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
