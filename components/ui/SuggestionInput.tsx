@@ -24,14 +24,24 @@ export default function SuggestionInput() {
   });
 
   const onSubmit = async (data: SuggestionType) => {
-    // todo: submit to server
-    toast("Your message is submitting!", {
-      icon: "⌛",
-    });
-    // ...
-    await new Promise((resolve) => setTimeout(resolve, 6000));
-    toast.success("Successfully submit!");
-    reset();
+    toast("Your message is submitting!", { icon: "⌛" });
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
+      toast.success("Successfully submitted!");
+      reset();
+    } catch (error) {
+      toast.error("Something went wrong. Try again.");
+    }
   };
 
   return (
