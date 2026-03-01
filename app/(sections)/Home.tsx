@@ -44,7 +44,7 @@ const Home = () => {
             and enjoy discovering new possibilities.
           </p>
 
-          <button className="text-gray-800 dark:text-white flex item-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md font-medium mt-4 mx-auto">
+          <button className="text-whitedark:text-white flex item-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md font-medium mt-4 mx-auto">
             <a
               href="https://utfs.io/f/8dfed853-d843-4c7b-8e36-d6b5c5912096-tz98mj.pdf"
               onClick={handlesubmit}
