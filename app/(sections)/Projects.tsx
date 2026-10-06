@@ -12,19 +12,46 @@ import CAP2 from "@/components/images/capstone-2.png";
 import CAP3 from "@/components/images/capstone-3.png";
 import CAP4 from "@/components/images/filipono-de.png";
 
+// New Websites
+import MiamiAgents from "@/components/images/miami-agents.png";
+import MiamiAttorneys from "@/components/images/miami-attorneys.png";
+import DefianceCounty from "@/components/images/defiance-county-directory.png";
+import HenryCounty from "@/components/images/henry-county-directory.png";
+import PodcastersDir from "@/components/images/podcasters-directory.png";
+import PodcastersToday from "@/components/images/podcasters-today.png";
+import ProducersToday from "@/components/images/producers-today.png";
+import AttorneysToday from "@/components/images/attorneys-today.png";
+import AuthorsToday from "@/components/images/authors-today.png";
+
 const Projects = () => {
   const projectList = [
-    { title: "Automated Glass Fruit Video Generation", desc: "An AI Automation that create a video of Glass Fruit videos and upload it to any Social Meadia.", img: AI4 },
-    { title: "Telegram AI Bot using Gemini AI", desc: "An friendly AI Agent in Telegram where you can ask anything and it will answer in friendly way.", img: AI3 },
-    { title: "AI Consultation Workflow", desc: "An AI Consultation Website for providing the full roadmap of your Automation thru email for free.", img: AI2 },
-    { title: "AI Consultation", desc: "An AI Consultation Website for providing the full roadmap of your Automation thru email for free.", img: AI1 },
-    { title: "Soliera Logistic", desc: "A system for procuring, warehousing, assets management, and document tracking for Soliera Hotel and Restaurant.", img: CAP1 },
-    { title: "ZPPSU Document Request and Tracking", desc: "An School system for requesting for Document and tracking.", img: CAP2 },
-    { title: "PPLSAWARDS", desc: "An Website for displaying all awardees that has been awarded for their outstanding contribution.", img: CAP3 },
-    { title: "Ranimeflixx", desc: "A mobile application that you can watch all streaming anime with no ads.", img: Proj2 },
-    { title: "The Gym Street Coach", desc: "A mobile app that helps coach to track their clients fitness goals and progress.", img: Proj1 },
-    { title: "AGreenNatureConnect", desc: "A web app that helps farmers to connect with the people about urban farming. This is our capstone system.", img: Proj3 },
-    { title: "FILIPINO DE CUISINE", desc: "A Landing Page for showing the taste of Filipino De Cuisine.", img: CAP4 },
+    // Websites (Priority)
+    { title: "Miami Agents", desc: "Miami's Most Distinguished Real Estate Agents Directory.", img: MiamiAgents, link: "https://miamiagents.realestate/" },
+    { title: "Miami Attorneys", desc: "Devoted to Justice: Search our verified legal directory for Miami's top law firms.", img: MiamiAttorneys, link: "https://miamiattorneys.legal/" },
+    { title: "Defiance County Directory", desc: "Discover Defiance County local businesses and services.", img: DefianceCounty, link: "https://defiancecounty.directory/" },
+    { title: "Henry County Directory", desc: "Explore and discover the best spots in Henry County.", img: HenryCounty, link: "https://www.henrycounty.directory/" },
+    { title: "Podcasters Directory", desc: "Find better podcast matches faster for guests and hosts.", img: PodcastersDir, link: "https://podcasters.directory/" },
+    { title: "Podcasters Today", desc: "Be featured on Podcasters Today and reach across top platforms.", img: PodcastersToday, link: "https://podcasters.today/" },
+    { title: "Producers Today", desc: "The voice of producers. Share your expertise across platforms.", img: ProducersToday, link: "https://producers.today/" },
+    { title: "Attorneys Today", desc: "Book your free TV interview and share your story.", img: AttorneysToday, link: "https://attorneystoday.tv/" },
+    { title: "Authors Today", desc: "The voice of publishing. Emerging voices and storytelling.", img: AuthorsToday, link: "https://authorstoday.tv/" },
+    
+    // Mobile Apps & Others
+    { title: "Ranimeflixx", desc: "A mobile application that you can watch all streaming anime with no ads.", img: Proj2, link: "" },
+    { title: "The Gym Street Coach", desc: "A mobile app that helps coach to track their clients fitness goals and progress.", img: Proj1, link: "" },
+    
+    // AI Automations
+    { title: "Automated Glass Fruit Video Generation", desc: "An AI Automation that create a video of Glass Fruit videos and upload it to any Social Meadia.", img: AI4, link: "" },
+    { title: "Telegram AI Bot using Gemini AI", desc: "An friendly AI Agent in Telegram where you can ask anything and it will answer in friendly way.", img: AI3, link: "" },
+    { title: "AI Consultation Workflow", desc: "An AI Consultation Website for providing the full roadmap of your Automation thru email for free.", img: AI2, link: "" },
+    { title: "AI Consultation", desc: "An AI Consultation Website for providing the full roadmap of your Automation thru email for free.", img: AI1, link: "" },
+    
+    // Capstone / Previous Projects
+    { title: "Soliera Logistic", desc: "A system for procuring, warehousing, assets management, and document tracking for Soliera Hotel and Restaurant.", img: CAP1, link: "https://log1-test.vercel.app/" },
+    { title: "ZPPSU Document Request and Tracking", desc: "An School system for requesting for Document and tracking.", img: CAP2, link: "https://zppsuniversity.vercel.app/" },
+    { title: "PPLSAWARDS", desc: "An Website for displaying all awardees that has been awarded for their outstanding contribution.", img: CAP3, link: "https://ppslawardees.vercel.app/" },
+    { title: "AGreenNatureConnect", desc: "A web app that helps farmers to connect with the people about urban farming. This is our capstone system.", img: Proj3, link: "" },
+    { title: "FILIPINO DE CUISINE", desc: "A Landing Page for showing the taste of Filipino De Cuisine.", img: CAP4, link: "" },
   ];
 
   return (
@@ -62,9 +89,23 @@ const Projects = () => {
                     {proj.desc}
                   </p>
                 </div>
-                <button className="retro-btn w-full mt-auto">
-                  [ EXECUTE ]
-                </button>
+                {proj.link ? (
+                  <a 
+                    href={proj.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="retro-btn w-full mt-auto block text-center py-2"
+                  >
+                    [ EXECUTE ]
+                  </a>
+                ) : (
+                  <button 
+                    disabled 
+                    className="retro-btn w-full mt-auto block text-center py-2 opacity-50 cursor-not-allowed"
+                  >
+                    [ NOT AVAILABLE ]
+                  </button>
+                )}
               </div>
             </div>
           ))}
