@@ -1,39 +1,33 @@
 import React from "react";
-import Image from "next/image";
-import Team from "@/components/images/me.jpg";
 
-const Home = () => {
+const About = () => {
   return (
     <section
       id="about"
-      className=" h-[100vh] flex-col flex items-center justify-center "
+      className="min-h-[100vh] flex-col flex items-center justify-center p-4 bg-transparent"
     >
-      <div className="container flex items-center justify-center">
-        {/* <Image
-          src={Team}
-          width={400}
-          height={400}
-          alt="Ralph Saladino"
-          className="rounded-3xl max-md:hidden"
-        /> */}
-        <div className="space-y-4 mb-8 text-justify max-lg:mr-0 ">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
-            About Me
-          </h2>
-          <p className="text-gray-800 dark:text-gray-300  max-w-[700px] max-sm:text-base text-xl  tracking-tighter">
-            Hi my name is Ralph S. Saladino, I am a Web developer and AI
-            Automation Specialist with a passion for creating beautiful
-            functional web applications and AI Automation Workflow.
+      <div className="container max-w-4xl retro-window p-8">
+        <div className="retro-window-header mb-8 pb-2 flex justify-between">
+          <span>ABOUT_ME.TXT - Notepad</span>
+          <div className="space-x-2 flex">
+            <span className="cursor-pointer hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-1">_</span>
+            <span className="cursor-pointer hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-1">[]</span>
+            <span className="cursor-pointer hover:bg-red-500 hover:text-white px-1">X</span>
+          </div>
+        </div>
+        
+        <div className="space-y-6 font-['Space_Mono'] text-[var(--fg-color)] text-lg md:text-xl leading-relaxed">
+          <p>
+            &gt; Hi my name is Ralph S. Saladino.
           </p>
-          {/* <p className="text-gray-800 dark:text-gray-300 max-w-[700px] max-sm:text-base text-xl  tracking-tighter">
-            I have bit experience with flutter native, react native, react js,
-            and next js but Im willing to learn more to enhance my skill and
-            techstacks.
-          </p> */}
+          <p>
+            &gt; I am a Web developer and AI Automation Specialist with a passion for creating beautiful functional web applications and AI Automation Workflows.
+          </p>
+          <p className="animate-pulse">_</p>
         </div>
       </div>
     </section>
   );
 };
 
-export default Home;
+export default About;

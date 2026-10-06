@@ -1,49 +1,29 @@
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
-import { ThemeToggler } from "./Themetoggler";
 
 const Navbar = () => {
   return (
-    <header className="flex item-center justify-between shadow-sm shadow-gray-200 dark:shadow-none p-4 sticky top-0 dark:bg-[#020817] bg-white">
+    <header className="flex items-center justify-between p-4 sticky top-0 bg-[var(--bg-color)] border-b-2 border-[var(--border-color)] z-40">
       <Link className="space-x-2 md:ml-5 ml-0 flex items-center" href="#about">
-        <h1 className="font font-bold text-md ">
-          <span className="text-blue-600 space-x-3">RALPH </span>
-          <span>SALADINO</span>
+        <h1 className="font-bold text-2xl font-['VT323'] uppercase tracking-widest text-[var(--fg-color)]">
+          <span className="mr-2">&gt;</span>RALPH_SALADINO<span className="animate-pulse">_</span>
         </h1>
       </Link>
 
       <div className="flex items-center space-x-8 md:mr-5 mr-0">
-        <div className="text-md hidden md:block">
-          <ul className="flex items-center space-x-4">
-            <Link className="hover:underline underline-offset-4" href="#home">
-              Home
+        <div className="text-md hidden md:block font-['Space_Mono']">
+          <ul className="flex items-center space-x-6">
+            <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#home">
+              [HOME]
             </Link>
-            <Link className="hover:underline underline-offset-4" href="#tools">
-              Tools
+            <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#tools">
+              [TOOLS]
             </Link>
-            {/* <Link
-              className="hover:underline underline-offset-4"
-              href="#experience"
-            >
-              Experience
-            </Link> */}
-            <Link
-              className="hover:underline underline-offset-4"
-              href="#projects"
-            >
-              Projects
+            <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#projects">
+              [PROJECTS]
             </Link>
-            {/* <Link
-              className="hover:underline underline-offset-4"
-              href="#contacts"
-            >
-              Contacts
-            </Link> */}
           </ul>
         </div>
-
-        <ThemeToggler />
       </div>
     </header>
   );
