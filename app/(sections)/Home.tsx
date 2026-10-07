@@ -42,7 +42,7 @@ const Home = () => {
             <div className="text-lg md:text-xl text-justify max-w-2xl leading-relaxed">
               <TypeAnimation
                 sequence={[
-                  "> I am constantly seeking to expand my knowledge in this field.\n> I find the dynamic nature of AI Automation and Web Development fascinating and enjoy discovering new possibilities.\n> Type 'help' or click download below..."
+                  "> I am constantly seeking to expand my knowledge and expertise in technology.\n> I find the dynamic nature of AI Automation and Web Development fascinating, and I enjoy discovering new possibilities and crafting modern solutions.\n> Type 'help' or click download below..."
                 ]}
                 speed={80}
                 cursor={false}

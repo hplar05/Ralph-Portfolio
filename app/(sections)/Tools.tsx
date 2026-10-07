@@ -14,8 +14,15 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiGit,
+  SiGithub,
+  SiPhp,
+  SiMysql,
+  SiAnthropic,
+  SiGooglegemini,
 } from "react-icons/si";
-import { Database, Zap, Mail, Bell } from "lucide-react";
+import { VscVscode } from "react-icons/vsc";
+import { Database, Zap, Mail, Bell, Workflow, Target, Orbit, Bot, Sparkles, Layers } from "lucide-react";
 
 interface Tool {
   name: string;
@@ -31,10 +38,22 @@ const tools: Tool[] = [
   { name: "HTML", icon: <SiHtml5 className="w-6 h-6 md:w-8 md:h-8" />, category: "Language" },
   { name: "CSS", icon: <SiCss3 className="w-6 h-6 md:w-8 md:h-8" />, category: "Styling" },
   { name: "JavaScript", icon: <SiJavascript className="w-6 h-6 md:w-8 md:h-8" />, category: "Language" },
+  { name: "PHP", icon: <SiPhp className="w-6 h-6 md:w-8 md:h-8" />, category: "Language" },
+  { name: "MySQL", icon: <SiMysql className="w-6 h-6 md:w-8 md:h-8" />, category: "Database" },
   { name: "Supabase", icon: <SiSupabase className="w-6 h-6 md:w-8 md:h-8" />, category: "Backend" },
   { name: "Neon", icon: <Database className="w-6 h-6 md:w-8 md:h-8" />, category: "Database" },
   { name: "PostgreSQL", icon: <SiPostgresql className="w-6 h-6 md:w-8 md:h-8" />, category: "Database" },
   { name: "Prisma", icon: <Database className="w-6 h-6 md:w-8 md:h-8" />, category: "ORM" },
+  { name: "Git", icon: <SiGit className="w-6 h-6 md:w-8 md:h-8" />, category: "Version Control" },
+  { name: "GitHub", icon: <SiGithub className="w-6 h-6 md:w-8 md:h-8" />, category: "Version Control" },
+  { name: "VS Code", icon: <VscVscode className="w-6 h-6 md:w-8 md:h-8" />, category: "IDE" },
+  { name: "Antigravity IDE", icon: <Orbit className="w-6 h-6 md:w-8 md:h-8" />, category: "AI IDE" },
+  { name: "Claude Code", icon: <SiAnthropic className="w-6 h-6 md:w-8 md:h-8" />, category: "AI & CLI" },
+  { name: "Gemini", icon: <SiGooglegemini className="w-6 h-6 md:w-8 md:h-8" />, category: "AI & LLM" },
+  { name: "OpenClaw", icon: <Bot className="w-6 h-6 md:w-8 md:h-8" />, category: "Automation" },
+  { name: "Google Stitch", icon: <Layers className="w-6 h-6 md:w-8 md:h-8" />, category: "Integration" },
+  { name: "GoHighLevel", icon: <Workflow className="w-6 h-6 md:w-8 md:h-8" />, category: "CRM & Automation" },
+  { name: "DitLead", icon: <Target className="w-6 h-6 md:w-8 md:h-8" />, category: "Lead Gen" },
   { name: "Flutter", icon: <SiFlutter className="w-6 h-6 md:w-8 md:h-8" />, category: "Mobile" },
   { name: "React Native", icon: <SiReactivex className="w-6 h-6 md:w-8 md:h-8" />, category: "Mobile" },
   { name: "Expo Router", icon: <SiReactivex className="w-6 h-6 md:w-8 md:h-8" />, category: "Mobile" },

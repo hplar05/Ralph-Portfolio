@@ -18,10 +18,10 @@ const About = () => {
         
         <div className="space-y-6 font-['Space_Mono'] text-[var(--fg-color)] text-lg md:text-xl leading-relaxed">
           <p>
-            &gt; Hi my name is Ralph S. Saladino.
+            &gt; Hi, my name is Ralph S. Saladino.
           </p>
           <p>
-            &gt; I am a Web developer and AI Automation Specialist with a passion for creating beautiful functional web applications and AI Automation Workflows.
+            &gt; I am a Web Developer and AI Automation Specialist with a passion for building beautiful, functional web applications and intelligent automation workflows.
           </p>
           <p className="animate-pulse">_</p>
         </div>

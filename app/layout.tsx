@@ -6,13 +6,14 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/ui/Navbar";
 import BootUp from "@/components/ui/BootUp";
 import Footer from "@/components/ui/Footer";
+import { FloatingButton } from "@/components/ui/FloatingButton";
 
 const vt323 = VT323({ weight: "400", subsets: ["latin"], variable: "--font-vt323" });
 const spaceMono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-space-mono" });
 
 export const metadata: Metadata = {
   title: "Ralph Saladino - Portfolio OS",
-  description: "My Personal Portfolio - Retro Edition!",
+  description: "My Personal Portfolio!",
 };
 
 export default function RootLayout({
@@ -41,6 +42,7 @@ export default function RootLayout({
               {children}
             </div>
             <Footer />
+            <FloatingButton />
           </div>
         </ThemeProvider>
       </body>

@@ -16,6 +16,9 @@ const Navbar = () => {
             <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#home">
               [HOME]
             </Link>
+            <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#about">
+              [ABOUT]
+            </Link>
             <Link className="hover:bg-[var(--border-color)] hover:text-[var(--window-bg)] px-2 py-1 transition-colors" href="#tools">
               [TOOLS]
             </Link>
